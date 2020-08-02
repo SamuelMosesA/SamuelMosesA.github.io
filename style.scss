@@ -1,0 +1,429 @@
+$active_gray: #4d5868;
+$active_gray-secondary: #5d6471;
+$selection-gray: #4d5868;
+$selection-gray-secondary: #5d6471;
+$navbar-background: #212529;
+$navbar-secondary: #313336;
+
+$change-width: 768px;
+
+@mixin assignValue($properties, $value) {
+  @each $property in $properties {
+    #{$property}: $value
+  }
+}
+
+@mixin webkit-and-moz($property, $value) {
+  #{"-webkit-"+$property}: $value;
+  #{"-moz-"+$property}: $value;
+}
+
+
+//---------------------------------------------------------
+//Basic Styles
+//---------------------------------------------------------
+
+@import "fonts/covesfont.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+body {
+  font-family: Nunito, sans-serif;
+  color: #272829;
+  scroll-behavior: smooth;
+  //background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+a {
+  color: #0563bb;
+}
+
+a:hover {
+  color: #067ded;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+
+//---------------------------------------------------------
+//Navbar Styles
+//---------------------------------------------------------
+
+//side panel
+header {
+  background: $navbar-background;
+  position: fixed;
+  @include assignValue(top bottom right, 0);
+  width: 50px;
+  transition: all 0.3s;
+  transition-delay: -0.1s;
+  z-index: 500;
+  overflow-y: auto;
+
+  @media (max-width: $change-width) {
+    right: -100px;
+  }
+}
+
+.nav-menu {
+  transition: all 0.1s;
+  //Static Icon styles
+  ul {
+    padding: 0;
+
+    li {
+      position: relative;
+      margin: 0;
+      @include assignValue(left right, 0);
+      @include assignValue(margin-top margin-bottom, 15px);
+      width: 100%;
+      list-style: none;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      @include assignValue(padding-right padding-left, 5px);
+      white-space: nowrap;
+
+    }
+
+    span {
+      position: relative;
+      left: 0;
+      font-size: 15px;
+      color: #fff;
+      display: none;
+      margin: 0;
+      flex-grow: 0;
+    }
+
+    i {
+      position: relative;
+      left: 0;
+      font-size: 20px;
+      color: #fff;
+      flex-grow: 0;
+    }
+
+    li.active {
+      a {
+        background: linear-gradient(to right, $active-gray 57px, $active-gray-secondary 57px);
+      }
+    }
+
+    //-------------------------
+    //hover styles
+    //-------------------------
+
+    li:hover > a, a:hover {
+      background: linear-gradient(to right, $selection-gray 57px, $selection-gray-secondary 57px);
+      width: 100%;
+    }
+  }
+}
+
+@mixin header-full {
+  padding: 0;
+  width: 165px;
+  background: linear-gradient(to right, $navbar-background 57px, $navbar-secondary 57px);
+
+
+  li {
+    width: 100%;
+  }
+
+  a {
+    @include assignValue(padding-right padding-left, 20px);
+    border-radius: 0;
+    justify-content: start;
+  }
+
+  span {
+    display: block;
+  }
+
+  i {
+    width: 50px;
+  }
+}
+
+header:hover {
+  @media (min-width: $change-width) {
+    @include header-full;
+  }
+
+}
+
+
+header.mobile-on {
+  @media (max-width: $change-width) {
+    @include header-full;
+    right: 0;
+  }
+}
+
+//------------------------------------------
+//Mobile nav Section
+//------------------------------------------
+.mobile-nav-button {
+  position: fixed;
+  @include assignValue(top right, 15px);
+  //@include assignValue(height width, 25px);
+  background-color: whitesmoke;
+  padding: 7px 7px;
+  //border: 1px #525252 solid;
+  border-radius: 5px;
+  z-index: 501;
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #1a1a1a;
+  }
+}
+
+
+//-------------------------
+//Landing Page styles
+//-------------------------
+
+#landing {
+  width: 100%;
+  padding-top: 15vh;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $change-width) {
+    padding-right: 160px;
+  }
+
+  .landing-title {
+    position: relative;
+    margin-bottom: 10vh;
+    font-family: Ubuntu, sans-serif;
+    font-size: 8.6vw;
+    font-weight: 700;
+    line-height: 9vw;
+
+    @media (max-width: $change-width) {
+      font-size: 12vw;
+    }
+  }
+
+  #landing-about-container {
+    background-color: #1a1a1a;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 0;
+
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 30px;
+    text-align: center;
+
+    @media (min-width: $change-width) {
+      width: 30vw;
+    }
+
+    @media (max-width: $change-width) {
+      margin-top: 10vh;
+      margin-left: 7vw;
+
+    }
+  }
+
+  p {
+    color: whitesmoke;
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    font-family: Archivo, sans-serif;
+
+    @media (max-width: $change-width) {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+
+  .prof-web-links {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+
+    a {
+      font-size: 38px;
+      display: inline-block;
+      color: whitesmoke;
+      line-height: 1;
+      margin-right: 20px;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #0563bb;
+    }
+
+  }
+
+
+  .first-contact-button {
+    width: 85px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    margin-right: 10px;
+    background: whitesmoke;
+
+    a {
+      display: flex;
+      justify-content: center;
+      font-family: covesbold, sans-serif;
+      font-size: 20px;
+      color: black;
+    }
+
+  }
+}
+
+
+.landing-container {
+  margin-block-end: 10vh;
+  margin-left: 3vw;
+  margin-right: 10vw;
+}
+
+#landing::before {
+  content: "";
+  background-image: linear-gradient(135deg, rgba(255, 166, 0, 1) 14.7%, rgba(255, 99, 97, 1) 73%);
+  //background-color:#fea940;
+  background-size: cover;
+  position: absolute;
+  width: 64.4%;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+
+  @media (max-width: $change-width) {
+    width: 49.5%;
+  }
+}
+
+#ribbon {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+  @media (max-width: $change-width) {
+    width: 132%;
+    height: 75%;
+    transform: translate(15%, -5%);
+  }
+}
+
+
+#samuel {
+  position: relative;
+  left: 0;
+
+  display: inline;
+  //background-image: linear-gradient(45deg, hsl(342 97% 66% / 1) 30%, #fee140 100%);
+  //background-size: 100%;
+  //background-repeat: no-repeat;
+  //@include webkit-and-moz(background-clip, text);
+  //@include webkit-and-moz(text-fill-color, transparent);
+  color: #282828;
+}
+
+#moses {
+  display: inline;
+  color: white;
+  position: relative;
+  left: 0;
+  transform: translateX(3.6vw);
+}
+
+
+%right-padding {
+  @media (min-width: $change-width) {
+    padding: 0 90px 0 50px;
+  }
+
+}
+
+//------------------------------------------
+//Work Section
+//------------------------------------------
+
+
+#work {
+  position: relative;
+  @include assignValue(top left right, 0);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: ghostwhite;
+
+  h1 {
+    font-family: Ubuntu, serif;
+    font-size: 14vh;
+    color: #1a1a1a;
+
+    position: relative;
+    left: 20px
+  }
+
+  #card-container {
+    @extend %right-padding;
+    @media (min-width: $change-width) {
+      padding-left: 50px - 15px;
+    }
+  }
+
+  %card-border-radius {
+    border-radius: 15px;
+  }
+
+  .card {
+    @extend %card-border-radius;
+    border: none;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    margin-block-end: 15px;
+
+    @media (max-width: 576px) {
+      margin: 24px 40px;
+    }
+    @media (min-width: $change-width) {
+      margin: 15px 7px;
+    }
+
+    overflow: hidden;
+
+    h5 {
+      font-family: Arvo, serif;
+    }
+
+    p {
+      font-family: Nunito, sans-serif;
+      font-size: medium;
+    }
+  }
+
+}
+
+
+
