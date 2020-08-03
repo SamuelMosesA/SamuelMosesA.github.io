@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 body {
   font-family: Nunito, sans-serif;
   color: #272829;
@@ -204,7 +205,7 @@ header {
   color: whitesmoke;
   margin: 15px 0 0 0;
   font-size: 20px;
-  font-family: Archivo, sans-serif;
+  font-family: "Roboto Slab", sans-serif;
 }
 @media (max-width: 768px) {
   #landing p {
@@ -239,7 +240,7 @@ header {
 #landing .first-contact-button a {
   display: flex;
   justify-content: center;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 20px;
   color: black;
 }
