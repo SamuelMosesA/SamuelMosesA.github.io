@@ -11,5 +11,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="bootstrap.bundle" level="application" />
     <orderEntry type="library" name="waypoints" level="application" />
+    <orderEntry type="library" name="aos" level="application" />
   </component>
 </module>

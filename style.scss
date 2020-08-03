@@ -23,7 +23,7 @@ $change-width: 768px;
 //Basic Styles
 //---------------------------------------------------------
 
-@import "fonts/covesfont.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
@@ -289,7 +289,7 @@ header.mobile-on {
     a {
       display: flex;
       justify-content: center;
-      font-family: covesbold, sans-serif;
+      font-family: "Roboto Slab", sans-serif;
       font-size: 20px;
       color: black;
     }
