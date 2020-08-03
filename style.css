@@ -205,7 +205,9 @@ header {
   color: whitesmoke;
   margin: 15px 0 0 0;
   font-size: 20px;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "PLayfair Display", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 @media (max-width: 768px) {
   #landing p {
