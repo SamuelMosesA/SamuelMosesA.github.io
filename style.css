@@ -276,9 +276,9 @@ header {
 }
 @media (max-width: 768px) {
   #ribbon {
-    width: 132%;
-    height: 75%;
-    transform: translate(15%, -5%);
+    width: 128%;
+    height: 82%;
+    transform: translate(10%, 0%);
   }
 }
 

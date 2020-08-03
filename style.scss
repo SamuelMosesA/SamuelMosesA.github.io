@@ -329,9 +329,9 @@ header.mobile-on {
   z-index: -1;
 
   @media (max-width: $change-width) {
-    width: 132%;
-    height: 75%;
-    transform: translate(15%, -5%);
+    width: 128%;
+    height: 82%;
+    transform: translate(10%, 0%);
   }
 }
 
