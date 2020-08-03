@@ -18,6 +18,7 @@ function changeActiveState(id) {
             });
         }
 
+
         //Ribbon animation
         var ribbon_anime = anime.timeline({
             easing: 'cubicBezier(0,.74,.3,.93)',
