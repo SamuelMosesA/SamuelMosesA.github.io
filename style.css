@@ -337,8 +337,7 @@ header {
         #pors .card h5 {
           font-size: larger; } }
     #pors .card .card-text {
-      margin-bottom: 2rem;
-      line-height: 3rem; }
+      margin-bottom: 2rem; }
     #pors .card ul {
       font-size: x-large; }
       @media (max-width: 768px) {
@@ -402,8 +401,7 @@ header {
         #skills .card h5 {
           font-size: larger; } }
     #skills .card .card-text {
-      margin-top: 2rem;
-      line-height: 3rem; }
+      margin-top: 2rem; }
     #skills .card ul {
       columns: 2;
       -webkit-columns: 2;
@@ -412,6 +410,8 @@ header {
       @media (max-width: 768px) {
         #skills .card ul {
           font-size: large; } }
+      #skills .card ul li {
+        margin-bottom: 1rem; }
     #skills .card img {
       object-fit: contain;
       max-height: 30rm;

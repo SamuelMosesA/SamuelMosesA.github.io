@@ -491,7 +491,6 @@ header.mobile-on {
     }
     .card-text{
       margin-bottom: 2rem;
-      line-height: 3rem;
     }
     ul {
       font-size: x-large;
@@ -582,7 +581,6 @@ header.mobile-on {
     }
     .card-text{
       margin-top: 2rem;
-      line-height: 3rem;
     }
     ul {
       columns: 2;
@@ -591,6 +589,9 @@ header.mobile-on {
       font-size: x-large;
       @media (max-width: 768px) {
         font-size: large;
+      }
+      li{
+        margin-bottom: 1rem;
       }
     }
 
