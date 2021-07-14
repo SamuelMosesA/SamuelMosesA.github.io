@@ -47,10 +47,10 @@
                 <i class="fa fa-home"></i><span>Home</span></a></li>
             <li><a href="#work">
                 <i class="fa fa-briefcase"></i><span>Work</span></a></li>
+            <li><a href="#pors">
+                <i class="fa fa-certificate"></i><span>PORs</span></a></li>
             <li><a href="#skills">
                 <i class="fa fa-tools"></i><span>Skills</span></a></li>
-            <li><a href="#studies">
-                <i class="fa fa-book-open"></i><span>Studies</span></a></li>
         </ul>
     </nav>
 </header>
@@ -174,10 +174,12 @@
 
         <div id="landing-about-container">
             <div id="landing-description">
-                <p>AI for better productivity</p>
-                <p>AI/ML engineer, Full Stack Developer</p>
+                <p>Student of IIT Madras</p>
+                <p>Interests in AI, Web Development and Distributed systems</p>
                 <p style="margin-top:30px">
                     <button class="first-contact-button btn btn-default navig" type="button"><a href="#work">Work
+                    </a></button>
+                    <button class="first-contact-button btn btn-default navig" type="button"><a href="#pors">PORs
                     </a></button>
                     <button class="first-contact-button btn btn-default navig" type="button"><a href="#skills">Skills
                     </a></button>
@@ -185,8 +187,6 @@
                 <div class="prof-web-links">
                     <a href="https://github.com/SamuelMosesA" target="_blank" class="github"><i
                             class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/a-samuel-moses-952543197" target="_blank" class="linkedin"><i
-                            class="fa fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -202,67 +202,136 @@
 
             <div class="row">
 
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="card" id="unet">
                         <img class="card-img-top"
-                             src="https://i.pinimg.com/originals/27/6f/27/276f273d11f8b9dbc0a9c55bb38ea8c6.gif"
+                             src="images/00000722.png"
                              alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Spotify-Auto-Playlister</h5>
-                            <p class="card-text">Uses Spotify Python API, checks the genre and adds to respective
-                                playlist</p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
+                            <h5 class="card-title">Document Layout Segmentation with DL</h5>
+                            <p class="card-text">Developed and trained a <b>UNET</b> based architecture to 
+                            find different <b>sections</b> of a complex magazine layout. It has a good mean IOU of <b>74</b>
+                            </p>
+                            <a href="https://github.com/SamuelMosesA/NLP-OCR" target="_blank" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-6 col-sm-6">
                     <div class="card">
                         <img class="card-img-top"
-                             src="https://i.pinimg.com/originals/a6/ff/a5/a6ffa54c9b06f7030aecd93f011dcb60.gif">
-                        <div class="card-body">
-                            <h5 class="card-title">Self Accounting</h5>
-                            <p class="card-text">Reads the .csv from bank and uses GUI for inputting the details of
-                                transaction
-                                <br> Uses PyQT for GUI and </p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
-                        <img class="card-img-top"
-                             src="https://i.pinimg.com/originals/27/6f/27/276f273d11f8b9dbc0a9c55bb38ea8c6.gif"
+                             src="images/auction.png"
                              alt="Card image cap">
-
                         <div class="card-body">
-                            <h5 class="card-title">Spotify-Auto-Playlister</h5>
-                            <p class="card-text">Uses Spotify Python API, checks the genre and adds to respective
-                                playlist</p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
+                            <h5 class="card-title">E-Auction Website</h5>
+                            <p class="card-text">Website created as part of EDX homework
+                                <br> Using Django and SqLite, created an e-auction website where
+                            people can sell and bid on items </p>
+                            <a href="https://github.com/SamuelMosesA/commerceDjango" target="_blank" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
-                        <img class="card-img-top"
-                             src="https://i.pinimg.com/originals/a6/ff/a5/a6ffa54c9b06f7030aecd93f011dcb60.gif">
-                        <div class="card-body">
-                            <h5 class="card-title">Self Accounting</h5>
-                            <p class="card-text">Reads the .csv from bank and uses GUI for inputting the details of
-                                transaction
-                                <br> Uses PyQT for GUI and </p>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <img class="card-img-top"
+                             src="images/cache.png"
+                             alt="Card image cap">
+
+                        <div class="card-body">
+                            <h5 class="card-title">CPU cache Simulator</h5>
+                            <p class="card-text">
+                                Simulating different cache policies like random, LRU,
+                                PseudoLRU using C++
+                            </p>
+                            <a href="https://github.com/SamuelMosesA/CacheSim" class="btn btn-primary" target="_blank"><i class="fa fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card" id="corner">
+                        <img class="card-img-top"
+                             src="images/cornernet.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Cornernet Text Detection</h5>
+                            <p class="card-text">Coded Cornernet for text detection.
+                                It detects objects as a pair of keypoints
+                                <br> Based on Cornernet Code </p>
+                            <a href="https://github.com/SamuelMosesA/Cornernet-Text-Detection" target="_blank" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card">
+                        <img class="card-img-top"
+                             src="images/audio.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title">Rock vs Classical classifier</h5>
+                            <p class="card-text">Simple classifier to distinguish audio between rock and classical </p>
+                            <a href="https://github.com/SamuelMosesA/Music-Genre-Identification" target="_blank" class="btn btn-primary"><i class="fa fa-github"></i> Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pors">
+        <h1>Positions of Responsibility</h1>
+        <div id="card-containerpors">
+        <div class="row">
+            <div class="card mx-auto" style="width: 18rm;">
+                <div class="card-body">
+                  <h5 class="card-title">Coordinator at CVI club</h5>
+                  <ul class="card-text">
+                      <li>Made <a href="#unet">UNET</a> and <a href="#corner">Cornernet</a> projects as a part of NLP+OCR project</li>
+                      <li>Prepared teaching materials for the club</li>
+                  </ul>
+                  <h5 class="card-title">Developer for distributed crawler at IITM</h5>
+                  <ul class="card-text">
+                      <li>Configuring the distributed crawlers</li>
+                      <li>Doing analytics on crawled domains</li>
+                  </ul>
+                  
+  
+                </div>
+              </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <div id="card-containerskill">
+        <div class="row">
+            <div class="card mx-auto" style="width: 18rm;">
+                <div class="card-body">
+                  <h5 class="card-title">Skills used in projects</h5>
+                  <ul class="card-text">
+                      <li>C++</li>
+                      <li>Python</li>
+                      <li>Pytorch</li>
+                      <li>Machine Learning</li>
+                      <li>OpenCV</li>
+                      <li>Sklearn</li>
+                      <li>Django</li>
+                      <li>JavaScript</li>
+                      <li>Selenium</li>
+                  </ul>
+  
+                </div>
+              </div>
+        </div>
         </div>
     </section>
 </main>
