@@ -258,7 +258,7 @@ header {
   background: ghostwhite; }
   #work h1 {
     font-family: Ubuntu, serif;
-    font-size: 14vh;
+    font-size: 9vw;
     color: #1a1a1a;
     position: relative;
     left: 20px; }
@@ -300,7 +300,7 @@ header {
   background: #fffacd; }
   #pors h1 {
     font-family: Ubuntu, serif;
-    font-size: 12vh;
+    font-size: 8vw;
     color: #1a1a1a;
     position: relative;
     left: 20px; }
@@ -358,7 +358,7 @@ header {
   background: #6d6d64; }
   #skills h1 {
     font-family: Ubuntu, serif;
-    font-size: 14vh;
+    font-size: 9vw;
     color: ghostwhite;
     position: relative;
     left: 20px; }
