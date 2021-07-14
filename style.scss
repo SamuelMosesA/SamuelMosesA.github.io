@@ -429,6 +429,7 @@ header.mobile-on {
   }
 
 }
+
 #pors {
   position: relative;
   @include assignValue(top left right, 0);
@@ -470,10 +471,10 @@ header.mobile-on {
     margin-block-end: 15px;
     margin: auto;
     min-width: 60%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       margin: 24px 40px;
     }
     @media (min-width: $change-width) {
@@ -484,6 +485,9 @@ header.mobile-on {
     h5 {
       font-family: Ubuntu, serif;
       font-size: xx-large;
+      @media (max-width: 768px) {
+        font-size: larger;
+      }
     }
     .card-text{
       margin-bottom: 2rem;
@@ -491,11 +495,14 @@ header.mobile-on {
     }
     ul {
       font-size: x-large;
+      @media (max-width: 768px) {
+        font-size: large;
+      }
     }
 
     img{
       object-fit: contain;
-      max-height: 30rm;
+      max-height: 30rem;
       width: auto;
       height: auto;
     }
@@ -555,10 +562,10 @@ header.mobile-on {
     margin-block-end: 15px;
     margin: auto;
     min-width: 60%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
 
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       margin: 24px 40px;
     }
     @media (min-width: $change-width) {
@@ -569,6 +576,9 @@ header.mobile-on {
     h5 {
       font-family: Ubuntu, serif;
       font-size: xx-large;
+      @media (max-width: 768px) {
+        font-size: larger;
+      }
     }
     .card-text{
       margin-top: 2rem;
@@ -579,6 +589,9 @@ header.mobile-on {
       -webkit-columns: 2;
       -moz-columns: 2;
       font-size: x-large;
+      @media (max-width: 768px) {
+        font-size: large;
+      }
     }
 
     img{
@@ -590,11 +603,7 @@ header.mobile-on {
 
     p {
       font-family: Nunito, sans-serif;
-      font-size: medium;
+      font-size: large;
     }
   }
-
 }
-
-
-

@@ -321,10 +321,10 @@ header {
     margin-block-end: 15px;
     margin: auto;
     min-width: 60%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
     overflow: hidden; }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       #pors .card {
         margin: 24px 40px; } }
     @media (min-width: 768px) {
@@ -333,14 +333,20 @@ header {
     #pors .card h5 {
       font-family: Ubuntu, serif;
       font-size: xx-large; }
+      @media (max-width: 768px) {
+        #pors .card h5 {
+          font-size: larger; } }
     #pors .card .card-text {
       margin-bottom: 2rem;
       line-height: 3rem; }
     #pors .card ul {
       font-size: x-large; }
+      @media (max-width: 768px) {
+        #pors .card ul {
+          font-size: large; } }
     #pors .card img {
       object-fit: contain;
-      max-height: 30rm;
+      max-height: 30rem;
       width: auto;
       height: auto; }
     #pors .card p {
@@ -380,10 +386,10 @@ header {
     margin-block-end: 15px;
     margin: auto;
     min-width: 60%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
     overflow: hidden; }
-    @media (max-width: 576px) {
+    @media (max-width: 768px) {
       #skills .card {
         margin: 24px 40px; } }
     @media (min-width: 768px) {
@@ -392,6 +398,9 @@ header {
     #skills .card h5 {
       font-family: Ubuntu, serif;
       font-size: xx-large; }
+      @media (max-width: 768px) {
+        #skills .card h5 {
+          font-size: larger; } }
     #skills .card .card-text {
       margin-top: 2rem;
       line-height: 3rem; }
@@ -400,6 +409,9 @@ header {
       -webkit-columns: 2;
       -moz-columns: 2;
       font-size: x-large; }
+      @media (max-width: 768px) {
+        #skills .card ul {
+          font-size: large; } }
     #skills .card img {
       object-fit: contain;
       max-height: 30rm;
@@ -407,4 +419,4 @@ header {
       height: auto; }
     #skills .card p {
       font-family: Nunito, sans-serif;
-      font-size: medium; }
+      font-size: large; }
