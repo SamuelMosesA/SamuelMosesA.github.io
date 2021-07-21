@@ -180,6 +180,9 @@ header.mobile-on {
   position: fixed;
   @include assignValue(top right, 15px);
   //@include assignValue(height width, 25px);
+  border-style: solid;
+  border-color: #6d6d64;
+  border-width: medium;
   background-color: whitesmoke;
   padding: 7px 7px;
   //border: 1px #525252 solid;
@@ -287,6 +290,7 @@ header.mobile-on {
     border-radius: 10px;
     padding: 2px 5px;
     margin-right: 10px;
+    margin-top: 10px;
     background: whitesmoke;
 
     a {
@@ -380,6 +384,9 @@ header.mobile-on {
     font-family: Ubuntu, serif;
     font-size: 9vw;
     color: #1a1a1a;
+    @media (max-width: $change-width) {
+      font-size: 15vw;
+    }
 
     position: relative;
     left: 20px
@@ -441,13 +448,17 @@ header.mobile-on {
   h1 {
     font-family: Ubuntu, serif;
     font-size: 8vw;
+    @media (max-width: $change-width) {
+      font-size: 12vw;
+    }
     color: #1a1a1a;
 
-    position: relative;
+    position: relative; 
     left: 20px
   }
 
-  #card-containerpors {
+
+.card-container {
     @extend %right-padding;
     @media (min-width: $change-width) {
       padding-left: 50px - 15px;
@@ -474,7 +485,7 @@ header.mobile-on {
     padding-left: 1vw;
     padding-right: 1vw;
 
-    @media (max-width: 768px) {
+    @media (max-width: $change-width) {
       margin: 24px 40px;
     }
     @media (min-width: $change-width) {
@@ -485,7 +496,7 @@ header.mobile-on {
     h5 {
       font-family: Ubuntu, serif;
       font-size: xx-large;
-      @media (max-width: 768px) {
+      @media (max-width: $change-width) {
         font-size: larger;
       }
     }
@@ -494,7 +505,7 @@ header.mobile-on {
     }
     ul {
       font-size: x-large;
-      @media (max-width: 768px) {
+      @media (max-width: $change-width) {
         font-size: large;
       }
     }
@@ -520,65 +531,24 @@ header.mobile-on {
 
 
 #skills {
-  position: relative;
-  @include assignValue(top left right, 0);
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+  @extend #pors;
   background:#6d6d64;
 
   h1 {
-    font-family: Ubuntu, serif;
     font-size: 9vw;
-    color: ghostwhite;
-
-    position: relative;
-    left: 20px
-  }
-
-  #card-containerskill {
-    @extend %right-padding;
-    @media (min-width: $change-width) {
-      padding-left: 50px - 15px;
+    @media (max-width: $change-width) {
+      font-size: 15vw;
     }
-    margin-top: auto;
-    margin-bottom: auto;
+    color: ghostwhite;
   }
 
-  %card-border-radius {
-    border-radius: 15px;
-  }
-  .row{
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+.card-container {
 
   .card {
-    @extend %card-border-radius;
-    border: none;
+
     background-color: #f2f2f2;
-    box-shadow: 0 20px 25px -5px rgba(248, 228, 255, 0.1), 0 10px 10px -5px rgba(248, 248, 255, 0.04);
-    margin-block-end: 15px;
-    margin: auto;
-    min-width: 60%;
-    padding-left: 1vw;
-    padding-right: 1vw;
-
-    @media (max-width: 768px) {
-      margin: 24px 40px;
-    }
-    @media (min-width: $change-width) {
-      margin: 15px 7px;
-    }
-
-    overflow: hidden;
-    h5 {
-      font-family: Ubuntu, serif;
-      font-size: xx-large;
-      @media (max-width: 768px) {
-        font-size: larger;
-      }
-    }
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
     .card-text{
       margin-top: 2rem;
     }
@@ -586,24 +556,16 @@ header.mobile-on {
       columns: 2;
       -webkit-columns: 2;
       -moz-columns: 2;
-      font-size: x-large;
-      @media (max-width: 768px) {
-        font-size: large;
-      }
       li{
         margin-bottom: 1rem;
       }
     }
 
     img{
-      object-fit: contain;
       max-height: 30rm;
-      width: auto;
-      height: auto;
     }
 
     p {
-      font-family: Nunito, sans-serif;
       font-size: large;
     }
   }

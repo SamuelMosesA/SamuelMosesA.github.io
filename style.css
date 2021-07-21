@@ -116,6 +116,9 @@ header {
   position: fixed;
   top: 15px;
   right: 15px;
+  border-style: solid;
+  border-color: #6d6d64;
+  border-width: medium;
   background-color: whitesmoke;
   padding: 7px 7px;
   border-radius: 5px;
@@ -191,6 +194,7 @@ header {
     border-radius: 10px;
     padding: 2px 5px;
     margin-right: 10px;
+    margin-top: 10px;
     background: whitesmoke; }
     #landing .first-contact-button a {
       display: flex;
@@ -244,7 +248,7 @@ header {
   transform: translateX(3.6vw); }
 
 @media (min-width: 768px) {
-  #work #card-container, #pors #card-containerpors, #skills #card-containerskill {
+  #work #card-container, #pors .card-container, #skills .card-container {
     padding: 0 90px 0 50px; } }
 
 #work {
@@ -262,6 +266,9 @@ header {
     color: #1a1a1a;
     position: relative;
     left: 20px; }
+    @media (max-width: 768px) {
+      #work h1 {
+        font-size: 15vw; } }
   @media (min-width: 768px) {
     #work #card-container {
       padding-left: 35px; } }
@@ -289,7 +296,7 @@ header {
       font-family: Nunito, sans-serif;
       font-size: medium; }
 
-#pors {
+#pors, #skills {
   position: relative;
   top: 0;
   left: 0;
@@ -298,24 +305,27 @@ header {
   min-height: 100vh;
   overflow-x: hidden;
   background: #fffacd; }
-  #pors h1 {
+  #pors h1, #skills h1 {
     font-family: Ubuntu, serif;
     font-size: 8vw;
     color: #1a1a1a;
     position: relative;
     left: 20px; }
-  #pors #card-containerpors {
+    @media (max-width: 768px) {
+      #pors h1, #skills h1 {
+        font-size: 12vw; } }
+  #pors .card-container, #skills .card-container {
     margin-top: auto;
     margin-bottom: auto; }
     @media (min-width: 768px) {
-      #pors #card-containerpors {
+      #pors .card-container, #skills .card-container {
         padding-left: 35px; } }
-  #pors .card {
+  #pors .card, #skills .card {
     border-radius: 15px; }
-  #pors .row {
+  #pors .row, #skills .row {
     margin-top: auto;
     margin-bottom: auto; }
-  #pors .card {
+  #pors .card, #skills .card {
     border: none;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     margin-block-end: 15px;
@@ -325,98 +335,53 @@ header {
     padding-right: 1vw;
     overflow: hidden; }
     @media (max-width: 768px) {
-      #pors .card {
+      #pors .card, #skills .card {
         margin: 24px 40px; } }
     @media (min-width: 768px) {
-      #pors .card {
+      #pors .card, #skills .card {
         margin: 15px 7px; } }
-    #pors .card h5 {
+    #pors .card h5, #skills .card h5 {
       font-family: Ubuntu, serif;
       font-size: xx-large; }
       @media (max-width: 768px) {
-        #pors .card h5 {
+        #pors .card h5, #skills .card h5 {
           font-size: larger; } }
-    #pors .card .card-text {
+    #pors .card .card-text, #skills .card .card-text {
       margin-bottom: 2rem; }
-    #pors .card ul {
+    #pors .card ul, #skills .card ul {
       font-size: x-large; }
       @media (max-width: 768px) {
-        #pors .card ul {
+        #pors .card ul, #skills .card ul {
           font-size: large; } }
-    #pors .card img {
+    #pors .card img, #skills .card img {
       object-fit: contain;
       max-height: 30rem;
       width: auto;
       height: auto; }
-    #pors .card p {
+    #pors .card p, #skills .card p {
       font-family: Nunito, sans-serif;
       font-size: medium; }
 
 #skills {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
   background: #6d6d64; }
   #skills h1 {
-    font-family: Ubuntu, serif;
     font-size: 9vw;
-    color: ghostwhite;
-    position: relative;
-    left: 20px; }
-  #skills #card-containerskill {
-    margin-top: auto;
-    margin-bottom: auto; }
-    @media (min-width: 768px) {
-      #skills #card-containerskill {
-        padding-left: 35px; } }
-  #skills .card {
-    border-radius: 15px; }
-  #skills .row {
-    margin-top: auto;
-    margin-bottom: auto; }
-  #skills .card {
-    border: none;
-    background-color: #f2f2f2;
-    box-shadow: 0 20px 25px -5px rgba(248, 228, 255, 0.1), 0 10px 10px -5px rgba(248, 248, 255, 0.04);
-    margin-block-end: 15px;
-    margin: auto;
-    min-width: 60%;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    overflow: hidden; }
+    color: ghostwhite; }
     @media (max-width: 768px) {
-      #skills .card {
-        margin: 24px 40px; } }
-    @media (min-width: 768px) {
-      #skills .card {
-        margin: 15px 7px; } }
-    #skills .card h5 {
-      font-family: Ubuntu, serif;
-      font-size: xx-large; }
-      @media (max-width: 768px) {
-        #skills .card h5 {
-          font-size: larger; } }
-    #skills .card .card-text {
-      margin-top: 2rem; }
-    #skills .card ul {
-      columns: 2;
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      font-size: x-large; }
-      @media (max-width: 768px) {
-        #skills .card ul {
-          font-size: large; } }
-      #skills .card ul li {
-        margin-bottom: 1rem; }
-    #skills .card img {
-      object-fit: contain;
-      max-height: 30rm;
-      width: auto;
-      height: auto; }
-    #skills .card p {
-      font-family: Nunito, sans-serif;
-      font-size: large; }
+      #skills h1 {
+        font-size: 15vw; } }
+  #skills .card-container .card {
+    background-color: #f2f2f2;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2); }
+  #skills .card-container .card-text {
+    margin-top: 2rem; }
+  #skills .card-container ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2; }
+    #skills .card-container ul li {
+      margin-bottom: 1rem; }
+  #skills .card-container img {
+    max-height: 30rm; }
+  #skills .card-container p {
+    font-size: large; }
